@@ -56,3 +56,124 @@ input[type="submit"]::-moz-focus-inner{border:0}
 input[type="submit"]{cursor:pointer;}
 
 
+.wrapper{
+	max-width: 1000px;
+	margin: 0 auto;
+}
+#header{
+	background: #ccc;
+	padding: 20px 30px;
+	position: relative;
+}
+#header:after{
+	content:"";
+	display:table;
+	clear:both;
+	width:100%;
+}
+#nav ul{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	float: right;
+	font-size: 20px;
+	line-height: 22px;
+}
+#nav li{
+	float: left;
+	margin: 0 0 0 20px;
+}
+/* burger menu style */
+.opener{
+	display: none;
+	float:right;
+	width:31px;
+	height:31px;
+	background:#000;
+	background:rgba(0, 0, 0, .5);
+	position:relative;
+	border-radius:3px;
+	text-indent:-9999px;
+	overflow:hidden;
+}
+.opener:before,
+.opener:after,
+.opener span{
+	background:#fff;
+	border-radius:4px;
+	position:absolute;
+	top:16px;
+	left:25%;
+	right:25%;
+	height:3px;
+	margin-top:-2px; /* height/2 */
+	-webkit-transition:all 0.2s linear;
+	transition:all 0.2s linear;
+}
+.opener:before,
+.opener:after{
+	content:'';
+	top:10px;
+}
+.opener:after{top:22px;}
+/* close button transition */
+.close-btn span,
+.nav-active .opener span{opacity:0;}
+.opener:hover{opacity:.9;}
+.close-btn:after,
+.close-btn:before,
+.nav-active .opener:after,
+.nav-active .opener:before{
+	-moz-transform:rotate(45deg);
+	-webkit-transform:rotate(45deg);
+	-ms-transform:rotate(45deg);
+	transform:rotate(45deg);
+	top:16px;
+	left:15%;
+	right:15%;
+}
+.close-btn:after,
+.nav-active .opener:after{
+	-moz-transform:rotate(-45deg);
+	-webkit-transform:rotate(-45deg);
+	-ms-transform:rotate(-45deg);
+	transform:rotate(-45deg);
+}
+@media only screen and (max-width:960px){
+	.opener{display:block;}
+	#nav .drop{
+		float:none;
+		opacity:0;
+		visibility:hidden;
+		-webkit-transition:opacity 0.25s linear;
+		transition:opacity 0.25s linear;
+		height:0;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		right: 0;
+	}
+	.nav-active #nav .drop{
+		opacity:1;
+		visibility:visible;
+		height:auto;
+	}
+	#nav .drop > ul{
+		border:1px solid #000;
+		background:#fff;
+	}
+	#nav ul{float:none;}
+	#nav li{
+		float:none;
+		margin:0;
+		padding:0;
+	}
+	#nav li a{
+		display:block;
+		padding:3px 5px;
+	}
+	#nav li a:hover{
+		background:#ededeb;
+		color:#000;
+	}
+}
