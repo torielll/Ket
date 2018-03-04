@@ -54,6 +54,9 @@ button{
 input[type="submit"]::-moz-focus-inner{border:0}
 input[type="submit"]{cursor:pointer;}
 
+@import 'owl.carousel/dist/assets/owl.carousel.css';
+@import 'owl.carousel';
+
 
 .wrapper{
 	max-width: 1000px;
