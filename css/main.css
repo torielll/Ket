@@ -19,7 +19,7 @@ img{
 }
 a{
 	color:#000;
-	text-decoration:underline;
+	text-decoration:none;
 }
 a:hover{text-decoration:none;}
 a:active {background-color: transparent;}
@@ -27,6 +27,12 @@ input, textarea, select{
 	font:100% Arial, Helvetica, sans-serif;
 	vertical-align:middle;
 	color:#1e1b1b;
+}
+ul{
+	padding: 0;
+}
+li {
+	list-style: none;
 }
 header, footer, article, section, hgroup, nav, figure, aside { display: block; }
 figure {
@@ -54,24 +60,39 @@ button{
 input[type="submit"]::-moz-focus-inner{border:0}
 input[type="submit"]{cursor:pointer;}
 
-@import 'owl.carousel/dist/assets/owl.carousel.css';
+@import url('https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700');
+@import '/bower_components/owl.carousel/dist/assets/owl.carousel.css';
 @import 'owl.carousel';
 
 
 .wrapper{
-	max-width: 1000px;
+	max-width: 1200px;
 	margin: 0 auto;
 }
 #header{
-	background: #ccc;
-	padding: 20px 30px;
+	background: #fff;
+	padding: 35px 20px;
 	position: relative;
+	max-width: 1920px;
+	margin: 0 auto;
 }
 #header:after{
 	content:"";
 	display:table;
 	clear:both;
 	width:100%;
+}
+.logo{
+	display: inline-block;
+}
+.logo a{
+	display: inline-block;
+	padding: 0px;
+	cursor: pointer;
+}
+#nav{
+	display: inline-block;
+	float: right;
 }
 #nav ul{
 	list-style: none;
@@ -84,6 +105,19 @@ input[type="submit"]{cursor:pointer;}
 #nav li{
 	float: left;
 	margin: 0 0 0 20px;
+}
+#nav li a{
+	display: inline-block;
+	padding: 40px 0 45px 0;
+	font-family: 'Raleway', sans-serif;
+}
+#nav li a:hover{
+	text-decoration: underline;
+	background:#fff;
+	color:#00e1ff;
+	}
+.header_conteiner{
+	background: #252726
 }
 /* burger menu style */
 .opener{
@@ -161,7 +195,6 @@ input[type="submit"]{cursor:pointer;}
 		height:auto;
 	}
 	#nav .drop > ul{
-		border:1px solid #000;
 		background:#fff;
 	}
 	#nav ul{float:none;}
@@ -176,6 +209,95 @@ input[type="submit"]{cursor:pointer;}
 	}
 	#nav li a:hover{
 		background:#ededeb;
-		color:#000;
+		color:#00e1ff;
 	}
+}
+/* header_container */
+main{
+	font-family: 'Raleway', sans-serif;
+}
+.header{
+	margin: 0;
+	padding: 285px 375px 280px 390px;
+	text-align: center;
+	font-family: 'Raleway', sans-serif;
+	color: #fff;
+	line-height: 1;
+}
+.header h1{
+	font-weight: 200;
+	font-size: 45pt; 
+}
+.header_button{
+	margin: 0;
+	padding: 15px 35px;
+	background: #252726;
+	font-weight: 300;
+	font-size: 15pt;
+	color: #fff;
+	border: 1px solid #fff
+}
+.header_button:hover{
+	background: #00e1ff;
+}
+.web, .graphic, .programming, .photography{
+	display: inline-block;
+	vertical-align: top;
+}
+.service{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: center;
+	justify-items: center;
+	padding: 135px 0 125px 0;
+}
+.service li{
+	max-width: 340px;
+	padding: 0 35px;
+	text-align: center;
+}
+
+.service img{
+	display: block;
+	margin: 0 auto;
+}
+.service a{
+	align-content: center;
+	padding: 50px 0 20px 0;
+	display: block;
+	font-weight: 200;
+	font-size:  15pt;
+	color: rgb(63, 66, 68);
+	line-height: 1.8;
+}
+.service p{
+	font-size: 13pt;
+	font-size: 13px;
+	color: rgb(146, 155, 160);
+}
+.service a:hover ~ p{
+	visibility: hidden
+}
+.blue_line{
+	display: inline-block;
+	width: 72px;
+	height: 3px;
+	background: #00e1ff;
+	justify-content: center;
+}
+.service_tour{
+	max-width: 980px;
+	margin: 0 auto;
+	background: #f7f7f7;
+	padding: 50px 0 0 0;
+	margin: 0 auto;
+}
+.service_tour_navigation{
+	display: block;
+}
+.service_tour_navigation li{
+	display: inline-block;
 }
