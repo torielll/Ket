@@ -65,6 +65,12 @@ input[type="submit"]{cursor:pointer;}
 @import 'owl.carousel';
 
 
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
 .wrapper{
 	max-width: 1200px;
 	margin: 0 auto;
@@ -288,17 +294,101 @@ main{
 	background: #00e1ff;
 	justify-content: center;
 }
+.service_tour_container{
+	background: #f7f7f7;	
+}
 .service_tour{
 	max-width: 980px;
 	margin: 0 auto;
-	background: #f7f7f7;
 	padding: 50px 0 0 0;
 	margin: 0 auto;
 }
 .service_tour_navigation{
-	display: block;
+	display: flex;
+	justify-content: center;
+	justify-items: center;
 }
 .service_tour_navigation li{
+	display: inline-flex;
+	height: 48px;
+	padding: 15px 180px;
+	border: 1px solid #cdced0;
+}
+.service_tour_navigation li:hover{
+	position: relative;
+	border: 1px solid #00e1ff;
+}
+
+.service_tour_navigation:hover li:after, .service_tour_navigation:hover li:before {
+	top: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.service_tour_navigation:hover li:after {
+	border-color: rgba(255, 255, 255, 0);
+	border-top-color: #f7f7f7;
+	border-width: 15px;
+	margin-left: -15px;
+}
+.service_tour_navigation:hover li:before {
+	border-color: rgba(0, 225, 255, 0);
+	border-top-color: #00e1ff;
+	border-width: 18px;
+	margin-left: -18px;
+}
+.service_tour_navigation a{
+	font-family: 'Raleway', sans-serif;
+	font-size: 11px;
+	font-weight: 500;
+	color: #3f4244
+}
+
+.service_tour_content{
+	display:  grid;
+	grid-template-columns: 1fr 1fr;
+}
+.service_tour_content_text{
+	padding: 125px 20px 110px;
 	display: inline-block;
 }
-.
+.service_tour_content h2{
+	display: inline-block;
+	font-family: 'Raleway', sans-serif;
+	font-size: 29px;
+	color: #3f4244
+}
+.service_tour_content p{
+	display: inline-block;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 200;
+	font-size: 11px;
+	color: #929ba0
+}
+.service_tour_content button{
+	padding: 20px 38px;	
+	background: #fff;
+	border: 1px solid #00e1ff;
+	color: #00e1ff
+}
+.service_tour_content button:hover{
+	color: #fff;
+	background: #00e1ff
+}
+.design_container{
+	width: 100%;
+	color: #fff;
+	background-color: rgb(37, 39, 38);
+	opacity: 0.8;
+	z-index: 406;
+}
+.design{
+	padding: 5px 5px 0px 5px;
+	text-align: center;
+	color: #fff;
+}
