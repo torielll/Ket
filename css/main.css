@@ -392,3 +392,32 @@ main{
 	text-align: center;
 	color: #fff;
 }
+.history_date{
+	display: inline-block;
+}
+.history_date h4{
+	font-weight: 400;
+	font-size: 18px;
+	color: #00e1ff;
+}
+.history_date span{
+	font-weight: 200;
+	font-size: 13px;
+	color: #c8cdce;
+}
+.history_content{
+	display: inline-block;
+}
+.history_content h2{
+	font-weight: 200;
+	font-size: 24px;
+	color: #3f4244;
+}
+.history_content p{
+	font-weight: 200;
+	font-size: 13px;
+	color: #929ba0;
+}
+.history_content a{
+	color: #00e1ff;
+}
