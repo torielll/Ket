@@ -1,7 +1,4 @@
-/images
-/js
-/bower_components
+bower_components
 /node_modules
 package.json
 package-lock.json
-/owl.carousel
