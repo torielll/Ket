@@ -1,0 +1,21 @@
+{
+  "name": "torielll",
+  "description": "",
+  "main": "",
+  "authors": [
+    "torielll <anderman_tor@mail.ru>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/torielll/Ket--One-page",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "owl.carousel": "^2.2.1"
+  }
+}
